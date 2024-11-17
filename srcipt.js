@@ -4,16 +4,16 @@ var stackOp = [];
 
 const numHandler = (num) => {
   const display = document.getElementById('display');
-  display.value += num; 
+  display.value += num; //1 //2 //3
 };
 
 
 const opHandler = (oper) => {
   const display = document.getElementById('display');
-  
+  //1
   if (display.value !== '') {
-    stackNum.push(parseFloat(display.value)); 
-    stackOp.push(oper); 
+    stackNum.push(parseFloat(display.value)); //1//2
+    stackOp.push(oper); //+ //+
     display.value = ''; 
   }
 };
@@ -22,20 +22,20 @@ const opHandler = (oper) => {
 const eqHandler = () => {
   const display = document.getElementById('display');
   
-  
+  //3
   if (display.value !== '') {
-    stackNum.push(parseFloat(display.value));
+    stackNum.push(parseFloat(display.value));//1//2//3
   }
 
-  
-  let result = stackNum[0];
+  //1+2+3
+  let result = stackNum[0];//1
   for (let i = 0; i < stackOp.length; i++) {
-    const operator = stackOp[i];
-    const nextNum = stackNum[i + 1];
+    const operator = stackOp[i];//+ //+
+    const nextNum = stackNum[i + 1];//3
 
-    switch (operator) {
+    switch ( erator) {
       case '+':
-        result += nextNum;
+        result += nextNum; //3+3
         break;
       case '-':
         result -= nextNum;

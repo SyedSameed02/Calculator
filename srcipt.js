@@ -18,7 +18,7 @@ const opHandler = (oper) => {
   }
 };
 
-
+//Fun to do coding
 const eqHandler = () => {
   const display = document.getElementById('display');
   
